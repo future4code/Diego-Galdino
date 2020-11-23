@@ -65,6 +65,9 @@ div img:nth-child(2) {
 .icone {
     height: 15px;
 }
+.icone:hover{
+    border: 2px solid  #c44f00;
+}
 .texto-quebrado{
     margin: auto;
     width: 200px;
