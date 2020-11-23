@@ -1,0 +1,50 @@
+
+.form{
+    margin: 40px auto;
+    width: 50%;
+
+}
+
+form label, form legend{
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+.input-padrao{
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 40%;
+	
+}
+
+.enviar{
+	width: 40%;
+	padding: 15px 0;
+	background-color: #319E72;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border:none;
+	border-radius: 5px;
+
+	cursor: pointer;
+}
+.enviar:hover{
+	background-color: #333333;
+
+}
+
+table{
+	margin: 20px 0 40px;
+}
+thead{
+	background: #555555;
+	color:white;
+	font-weight: bold;
+}
+
+td, th{
+	border:1px solid #000000;
+	padding: 8px 15px;
+}
