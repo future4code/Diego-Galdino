@@ -37,6 +37,9 @@ div img {
     width: 50px;
 }
 
+div img:nth-child(2) {
+    width: auto;
+}
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
