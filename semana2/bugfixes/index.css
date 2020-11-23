@@ -67,7 +67,18 @@ div img:nth-child(2) {
 .texto-quebrado{
     margin: auto;
     width: 200px;
+    margin-bottom: 20px;
 }
+.texto-quebrado2{
+    margin: auto;
+    width: 220px;
+    margin-bottom: 20px;
+}    
+
+ol li p{
+    text-align: center;
+}
+
 
 /** 
   *
