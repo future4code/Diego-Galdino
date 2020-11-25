@@ -1,0 +1,109 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#main-container{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#first-block {
+    width: 100%;
+    background-color: red;
+}
+
+.blue-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 33.33%;
+}
+
+.yellow-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    width: 33.33%;
+}
+
+.green-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    width: 33.33%;
+}
+
+.black-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 50%;
+    border: none;
+}
+
+.white-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 33.33%;
+}
+
+@media screen and (min-width: 520px) and (max-width: 1000px){
+    div{
+        padding: 10px;
+    }
+    #main-container{
+        width: 100vw;
+        display: flex;
+        
+    }
+    #first-block{
+        height: 10%;
+    }
+    
+    .blue-block, .yellow-block,.white-block{
+        height: 10%;
+        width: 50%;
+    }
+    .green-block ,#white1{
+        height: 10%;
+        width: 100%;
+    }
+    .black-block{
+        height: 20%;
+    }
+
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 519px){
+
+    #main-container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    div,.black-block,.white-block, .green-block,.blue-block,.yellow-block{
+        height: 8%;
+        width: 100%;
+    }
+
+
+
+}
