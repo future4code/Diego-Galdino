@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    height: 90vh;
+}
+
+.semana {
+    border: 1px dotted rgb(53, 53, 53);
+    width: 14%;
+    padding: 5px;
+}
+
+.item-riscado{
+    text-decoration: line-through
+}
+
+
+@media screen and (max-width: 500px){
+    section {
+        
+        flex-direction: column;
+        padding: 10px;
+    }
+    .semana {
+        margin: 10px 0px;
+        width: 100%;
+        height: 80%;
+ 
+
+    }
+    header{
+        padding: 10px;
+
+    }
+}
