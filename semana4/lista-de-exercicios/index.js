@@ -22,3 +22,74 @@
 // 4 - é criado 1 array numeros e duas variaveis numero1 e numero2 todos com valores iniciados
 // executa um for of verificando se o item do array numeros é maior ou menor e armazenando em numero1 e numero2 respectivamente
 // logo apos exibindo menor -10 e maior 1590
+
+// Exercícios de Lógica de Programação
+
+// 1 - Cite 3 maneiras de se percorrer/iterar uma lista. Faça um programa para exemplificar.
+// let array=[2,8,5,4,7,9,2,5,7,5]
+// for(let c=0;c<10;c++){
+//     console.log(array[c])
+// }
+// for(let num of array){
+//     console.log(num)
+// }
+// array.forEach((item)=>{
+//     console.log(item)
+// })
+
+// 2 - Para este exercício considere as seguintes variáveis:
+// a-false, b-false, c-true, d-true, e-false
+
+// 3 - Você tem que escrever um código que, dado um número N, ele imprima (no console) 
+// os N primeiros números pares (por exemplo, se N for 3, você deve imprimir 0, 2 e 4; se N for 5, deve imprimir 0, 2, 4, 6 e 8).
+// const quantidadeDeNumerosPares=3
+// let i = 0
+// while(i < quantidadeDeNumerosPares) {
+//   console.log(i*2)
+//   i++
+// }
+// primeiro a const necessita iniciar com um valor, depois a pegadinha do loop infinito haha, 
+// depois é so adicionar o incremento no i i++ e tirar o = da condição do for
+
+// 4 - Faça uma função que receba como parâmetro os tamanhos dos três lados do triângulo: a, b, c  e retorne se ele é equilátero, isósceles ou escaleno.
+// function resTriangulo(l1,l2,l3){
+//     if(l1 === l2 && l1 === l3 && l2 === l3){    return "Equilátero"}
+//     if(l1 !== l2 && l1 !== l3 && l2 !== l3){    return "Escaleno"}
+//     if(l1 === l2 && l1 !== l3 ){ return "Isósceles"}
+//     if(l1 === l3 && l2 !== l3 ){ return "Isósceles"}
+//     if(l2 === l3 && l1 !== l3 ){ return "Isósceles"}
+// }
+// console.log(resTriangulo(1,3,3))
+// console.log(resTriangulo(1,1,3))
+// console.log(resTriangulo(3,1,3))
+// console.log(resTriangulo(3,3,3))
+// console.log(resTriangulo(2,1,3))
+
+// 5 - i. indique qual é o maior,
+// ii. determine se eles são divisíveis um pelo outro (use o operador %) e
+// iii. determine a diferença entre eles (o resultado deve ser um número positivo sempre)
+// let valor1=15
+// let valor2=30
+// let maior
+// let menor
+// if(valor1>=valor2){
+//     console.log("O maior é",valor1)
+//     maior=valor1
+//     menor=valor2
+// }else{
+//     console.log("O maior é",valor2)
+//     maior=valor2
+//     menor=valor1
+// }
+// if(valor1%valor2===0){
+//     console.log(valor1," é divisivel por ",valor2)
+// }else{
+//     console.log(valor1," não é divisivel por ",valor2)
+// }
+// if(valor2%valor1===0){
+//     console.log(valor2," é divisivel por ",valor1)
+// }else{
+//     console.log(valor2," não é divisivel por ",valor1)
+// }
+// console.log("A diferença entre eles é ",maior-menor)
+
