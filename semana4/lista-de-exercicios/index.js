@@ -164,3 +164,103 @@
 // 		nome: "ANONIMO",
 // 	}
 // }
+
+// Exercicios de array
+
+// 1 - Considere um array com o seguinte formato: a e b
+// const pessoas=[
+// 	{ nome: "Pedro", idade: 20 },
+// 	{ nome: "João", idade: 10 },
+// 	{ nome: "Paula", idade: 12 },
+// 	{ nome: "Artur", idade: 89 } 
+// ]
+
+// let adultos = pessoas.filter((pessoa)=>{
+//     return pessoa.idade>=20
+// })
+// let criancas = pessoas.filter((pessoa)=>{
+//     return pessoa.idade<20
+// })
+// console.log(adultos,criancas)
+
+// 2 - Em todos os itens deste exercício, você terá que escrever uma função a b c
+// const array = [1, 2, 3, 4, 5, 6]
+
+// let dobro = array.map((item)=>{
+//     return item * 2 
+// })
+
+// let triploString = array.map((item)=>{
+//     return ""+item * 3+""
+// })
+// let parImpar = array.map((item)=>{
+//     if(item%2==0){
+//         return ""+item+" é par"
+//     }else{
+//         return ""+item+" é impar"
+//     }
+// })
+// console.log(dobro,triploString,parImpar)
+
+// 3 - Imagine que você trabalhe num parque a e b
+// const pessoas = [
+// 	{ nome: "Paula", idade: 12, altura: 1.8},
+// 	{ nome: "João", idade: 20, altura: 1.3},
+// 	{ nome: "Pedro", idade: 15, altura: 1.9},
+// 	{ nome: "Luciano", idade: 22, altura: 1.8},
+// 	{ nome: "Artur", idade: 10, altura: 1.2},
+// 	{ nome: "Soter", idade: 70, altura: 1.9}
+// ]
+
+// let permitirEntrada = pessoas.filter((pessoa)=>{
+//     return pessoa.altura>=1.5 && pessoa.idade>14 &&pessoa.idade<60
+// })
+// let naoPermitirEntrada = pessoas.filter((pessoa)=>{
+//     return pessoa.altura<1.5 || pessoa.idade<14 ||pessoa.idade>60
+// })
+// console.log(permitirEntrada,naoPermitirEntrada)
+
+// 4 - Você foi contratado por um escritório médico para gerar e-mails 
+// const consultas = [
+// 	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+// 	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+// 	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+// 	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+// ]
+// let msgEmail = consultas.map((consulta)=>{
+//     let mensagemCompleta
+//     if(consulta.cancelada===false){
+//         if(consulta.genero==="masculino"){
+//             mensagemCompleta= `Ola, Sr. ${consulta.nome}. Estamos enviando esta mensagem para lembra-lo da sua consulta no dia ${consulta.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+//         }else{
+//             mensagemCompleta= `Ola, Sra. ${consulta.nome}. Estamos enviando esta mensagem para lembra-la da sua consulta no dia ${consulta.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+//         }
+//     }else{
+//         if(consulta.genero==="masculino"){
+//             mensagemCompleta= `Ola, Sr. ${consulta.nome}. Infelizmente, sua consulta marcada para o dia ${consulta.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`
+//         }else{
+//             mensagemCompleta= `Ola, Sra. ${consulta.nome}. Infelizmente, sua consulta marcada para o dia ${consulta.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`
+//         }
+//     }
+//     return mensagemCompleta
+// })
+// console.log(msgEmail)
+
+// 5 - Agora, pediram para você ajudar a fazer uma funcionalidade de um banco digital.
+
+// const contas = [
+// 	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+// 	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+// 	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+// 	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+// 	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+// 	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+// ]
+// contas.forEach((conta)=>{
+//     let somaCompras=0
+//     conta.compras.map((compra)=>{
+//         somaCompras+=compra
+//     })
+//     conta.saldoTotal-=somaCompras
+// })
+// console.log(contas)
