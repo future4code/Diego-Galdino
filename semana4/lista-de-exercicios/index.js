@@ -120,3 +120,47 @@
 //     alert("Hello Labenu")
 // }
 // mostrarNaTela()
+
+// Exercícios de Objetos
+
+// 1 - array é um conjunto onde vc pode armazenar itens do mesmo contexto ex. array de inteiros=[2,1,3] 
+// e objeto é uma estrutura que vc pode organizar e agrupar melhor as informações. ex. o objeto pessoa={nome:"Diego",idade:"29",endereco:"Rua A"}
+
+// 2 - Crie uma função chamada criaRetangulo
+// function criaRetangulo(lado1,lado2){
+//     const retangulo={
+//         largura: lado1,
+//         altura: lado2,
+//         perimetro: (lado1+lado2)*2,
+//         area: lado1*lado2
+//     }
+//     return retangulo
+// } 
+// console.log(criaRetangulo(2,2))
+
+// 3 - Crie um objeto para representar seu filme favorito.
+// function criaFilme(){
+//     const filmeFavorito={
+//         titulo: "A Lenda do Tesouro Perdido: Livro dos Segredos", 
+//         ano: 2007 , 
+//         diretor:"Jon Turteltaub",
+//         ator:["Nicolas Cage","Diane Kruger","Jon Voight","Justin Bartha","Helen Mirren"]
+//     }
+//     console.log(`Venha assistir ao filme ${filmeFavorito.titulo}, de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor} e estrelado por ${filmeFavorito.ator}`)
+// }
+// criaFilme()
+
+// 4 - Crie um objeto que represente uma pessoa qualque
+// const pessoa = {
+// 	nome: "Diego Galdino",
+// 	idade: 29,
+// 	email: "diego@gmail.com",
+// 	endereco: "Rua la perto, 5000"
+// }
+
+// function anonimizarPessoa(pessoa) {
+// 	return {
+// 		...pessoa,
+// 		nome: "ANONIMO",
+// 	}
+// }
