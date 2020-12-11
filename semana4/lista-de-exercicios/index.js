@@ -93,3 +93,30 @@
 // }
 // console.log("A diferença entre eles é ",maior-menor)
 
+
+// Exercícios de Funções
+
+// 1 - Escreva uma função que receba um array de números e imprima na tela o segundo maior e o segundo menor número. 
+// Em seguida, invoque essa função. (Não é permitido usar funções de ordenação de vetores.)
+// let arrayNumeros =[10,20,30,22,11,9,99,8,48,56,23,44,12,66,65,33,5,88,84,77]
+// function maiorMenor(numeros){
+//     let aux
+//     for(let c=0; c<numeros.length;c++){
+//         for(let i=c+1;i<numeros.length;i++){
+//             if(numeros[c]>numeros[i]){
+//                 aux=numeros[c]
+//                 numeros[c]=numeros[i]
+//                 numeros[i]=aux
+//             }
+//         }
+//     }
+//     console.log(numeros)
+//     console.log("segundo maior",numeros[numeros.length-2],"segundo menor",numeros[1])
+// }
+// maiorMenor(arrayNumeros)
+
+// 2 - Escreva uma função não nomeada que faça um alert("Hello Labenu!");. Em seguida, invoque essa função.
+// let mostrarNaTela = function(){
+//     alert("Hello Labenu")
+// }
+// mostrarNaTela()
