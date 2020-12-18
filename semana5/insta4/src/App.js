@@ -1,7 +1,42 @@
 import React from 'react';
 import './App.css';
 import Post from './components/Post/Post';
+import styled from 'styled-components'
 
+
+const UserPhoto = styled.img `
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+`
+const PostPhoto = styled.img `
+  width: 100%;
+`
+const PostContainer = styled.div`
+  border: 1px solid gray;
+  width: 300px;
+  margin-bottom: 10px;
+`
+const PostHeader = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+` 
+
+const PostagemInputs = styled.input`
+text-align:center;
+height:20px;
+margin: 8px 0;
+`
+
+const DivPai = styled.div`
+text-align:center;
+display:flex;
+flex-direction: column;
+align-items:center;
+`
 class App extends React.Component {
 
   state = {
@@ -27,15 +62,7 @@ class App extends React.Component {
     valorInputFotoPost: ""
   }
 
-  listaPost = this.state.posts.map((post) => {
-    return (
-      <Post
-        nomeUsuario={post.nomeUsuario}
-        fotoUsuario={post.fotoUsuario}
-        fotoPost={post.fotoPost}
-      />
-    )
-  })
+
 
   adicionaPost = () => {
     const novoPost = {
@@ -47,33 +74,10 @@ class App extends React.Component {
     const novoArray = this.state.posts
     novoArray.push(novoPost)
     this.setState({ posts: novoArray })
-    this.ultimoPost()
-    // (()=>{
-    //   return (
-    //     <Post
-    //       nomeUsuario={novoPost.nomeUsuario}
-    //       fotoUsuario={novoPost.fotoUsuario}
-    //       fotoPost={novoPost.fotoPost}
-    //     />
-    //   )
-    // })
-  }
 
-  ultimoPost = () => {
-    console.log("item", this.state.posts.length - 1)
-    const itemPost = this.state.posts.filter((post, index) => {
-      let item
-      if (index === this.state.posts.length - 1) {
-        item = post
-        console.log("item")
-        return (<Post
-          nomeUsuario={item.nomeUsuario}
-          fotoUsuario={item.fotoUsuario}
-          fotoPost={item.fotoPost}
-        />)
-      }
-    })
-    
+    this.setState({ valorInputNomeUsuario: "" });
+    this.setState({ valorInputFotoUsuario: "" });
+    this.setState({ valorInputFotoPost: "" });
   }
 
   onChangeUsuarioNome = (event) => {
@@ -91,6 +95,23 @@ class App extends React.Component {
 
 
   render() {
+
+    const listaPost = this.state.posts.map((post) => {
+      return (
+        // <PostContainer>
+        //   <PostHeader>
+        //     <UserPhoto scr = {post.fotoUsuario}/>
+        //     <span>{post.nomeUsuario}</span>
+        //   </PostHeader>
+        //   <PostPhoto src={post.fotoPost}/>
+        // </PostContainer>
+        <Post
+          nomeUsuario={post.nomeUsuario}
+          fotoUsuario={post.fotoUsuario}
+          fotoPost={post.fotoPost}
+        />
+      )
+    })
 
     return (
       <div className={'app-container'}>
@@ -111,7 +132,7 @@ class App extends React.Component {
         />
         <button onClick={this.adicionaPost}>Adicionar</button>
 
-        {this.listaPost}
+        {listaPost}
         
       </div>
     );
