@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "5058b8ec-c89f-4e5f-9b4c-51165fbe9e5c",
+		"name": "Labefy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createPlaylist-Eletronica",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Eletronica\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				},
+				"description": "Comece criando três playlists, com os gêneros de músicas de que você mais gosta"
+			},
+			"response": []
+		},
+		{
+			"name": "createPlaylist-Rap",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Rap Nacional\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				},
+				"description": "Comece criando três playlists, com os gêneros de músicas de que você mais gosta"
+			},
+			"response": []
+		},
+		{
+			"name": "createPlaylist-Rock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Rock '80 '90\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				},
+				"description": "Comece criando três playlists, com os gêneros de músicas de que você mais gosta"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-eletronica1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Feeling Good\", \r\n    \"artist\": \"Vintage Culture & Chemical Surf \",\r\n    \"url\": \"http://spoti4.future4.com.br/1.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/d2d6b468-4f8b-4338-ae18-d93692b6eaa7/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"d2d6b468-4f8b-4338-ae18-d93692b6eaa7",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-eletronica2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Slow Down Feat. Jorja Smith \", \r\n    \"artist\": \"Maverick Sabre \",\r\n    \"url\": \"http://spoti4.future4.com.br/2.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/d2d6b468-4f8b-4338-ae18-d93692b6eaa7/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"d2d6b468-4f8b-4338-ae18-d93692b6eaa7",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-rap1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Subirusdoistiozin\", \r\n    \"artist\": \"Criolo\",\r\n    \"url\": \"http://spoti4.future4.com.br/3.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/1b68f9bf-f58e-4d77-9050-0d4f39d24af8/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"1b68f9bf-f58e-4d77-9050-0d4f39d24af8",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-rap2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sistema Obtuso\", \r\n    \"artist\": \"Criolo & Tropkillaz\",\r\n    \"url\": \"http://spoti4.future4.com.br/4.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/1b68f9bf-f58e-4d77-9050-0d4f39d24af8/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"1b68f9bf-f58e-4d77-9050-0d4f39d24af8",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-rock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Alive\", \r\n    \"artist\": \"Pearl Jam\",\r\n    \"url\": \"http://spoti4.future4.com.br/5.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/811da81c-6974-46ca-a78b-c374dbbe694f/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"811da81c-6974-46ca-a78b-c374dbbe694f",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-rock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Plush\", \r\n    \"artist\": \"Stone Temple Pilots\",\r\n    \"url\": \"http://spoti4.future4.com.br/6.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/811da81c-6974-46ca-a78b-c374dbbe694f/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"811da81c-6974-46ca-a78b-c374dbbe694f",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlaylistTrack",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "diego-galdino-epps"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "d2d6b468-4f8b-4338-ae18-d93692b6eaa7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "diego-galdino-epps"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=eletronica",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "eletronica"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-eletronica2 Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"This Is House\", \r\n    \"artist\": \"Moska\",\r\n    \"url\": \"http://spoti4.future4.com.br/7.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/d2d6b468-4f8b-4338-ae18-d93692b6eaa7/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"d2d6b468-4f8b-4338-ae18-d93692b6eaa7",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToList-eletronica2 Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-galdino-epps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Coffee\", \r\n    \"artist\": \"Tiësto & Vintage Culture\",\r\n    \"url\": \"http://spoti4.future4.com.br/8.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/d2d6b468-4f8b-4338-ae18-d93692b6eaa7/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"d2d6b468-4f8b-4338-ae18-d93692b6eaa7",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeTrackFromPlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "diego-galdino-epps"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Slow Down Feat. Jorja Smith \", \r\n    \"artist\": \"Maverick Sabre \",\r\n    \"url\": \"https://www.youtube.com/watch?v=76mkEfxxIl0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks",
+						":trackId"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "d2d6b468-4f8b-4338-ae18-d93692b6eaa7"
+						},
+						{
+							"key": "trackId",
+							"value": "61207dfe-45d9-4251-b840-074e63b6b2a5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "  deletePlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "diego-galdino-epps"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Slow Down Feat. Jorja Smith \", \r\n    \"artist\": \"Maverick Sabre \",\r\n    \"url\": \"https://www.youtube.com/watch?v=76mkEfxxIl0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "38c7b304-8793-43e1-a7be-03540855e882"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
