@@ -48,22 +48,19 @@ export default class CadastroMusica extends React.Component {
 
         return (
             <div>
-
                 <h2>Adicionar Musica</h2>
+                <span>Qual PlayList: </span>
+
                 <select onChange={(e) => {this.setState({ idPlayList: e.target.value })}}>
                     {this.state.listaPlaylist.map((p) => {
-                        return (
-                            
+                        return (       
                             <option value={p.id}>{p.name}</option>
                         )
                     })}
                 </select>
-                <p>Nome da Musica</p>
-                <input type="text" onChange={(e) => this.setState({ nomeMusica: e.target.value })} />
-                <p>Nome do Artista ou Banda</p>
-                <input type="text" onChange={(e) => this.setState({ nomeBanda: e.target.value })}/>
-                <p>URL da Musica</p>
-                <input type="text" onChange={(e) => this.setState({ urlMusica: e.target.value })}/>
+                <input type="text" placeholder="Nome da Musica" onChange={(e) => this.setState({ nomeMusica: e.target.value })} />
+                <input type="text" placeholder="Nome do Artista ou Banda" onChange={(e) => this.setState({ nomeBanda: e.target.value })}/>
+                <input type="text" placeholder="URL da Musica" onChange={(e) => this.setState({ urlMusica: e.target.value })}/>
                 <button onClick={()=>this.cadastraMusica(this.state.idPlayList)}>Salvar</button>
 
             </div>

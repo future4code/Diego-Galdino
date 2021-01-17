@@ -52,13 +52,13 @@ export default class ListaPlaylist extends React.Component {
     render() {
         const exibirLista = this.state.listaPlaylist.map((p) => {
             return (
-                <div>
-                    <li onClick={()=>this.selecionaPlayList(p) }><p><strong>{p.name}</strong></p></li>
-                    <button onClick={() => { this.excluirPlayList(p) }}>Excluir</button>
+                <ul>
+                    <li onClick={()=>this.selecionaPlayList(p) }><a><strong>{p.name}</strong></a></li>
+                    <button onClick={() => { this.excluirPlayList(p) }}>X</button>
                     {this.state.visivel&&this.state.playListSelecionada.name===p.name ?
                      <ItemMusica playList={p} /> : false}
 
-                </div>
+                </ul>
             )
         })
         return (

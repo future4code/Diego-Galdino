@@ -28,8 +28,8 @@ export default class CadastroPlaylist extends React.Component {
       axios
         .post(urlBase, body, configAxios)
         .then((res) => {
+          this.setState({ nomePlayList:"" })
           alert("Playlist cadastrado com sucesso")
-          this.setState({ nomePlayList: "" })
         })
         .catch((erro) => { alert("Digite um nome diferente") });
     } else {
@@ -43,7 +43,7 @@ export default class CadastroPlaylist extends React.Component {
       <div>
         <h2>Adicionar Play</h2>
         <p>Nome da Playlist</p>
-        <input type="text" onChange={(e) => this.setState({ nomePlayList: e.target.value })} />
+        <input type="text" onChange={e => this.setState({ nomePlayList: e.target.value })} />
         <button onClick={() => this.cadastraPlayList(this.state.nomePlayList)}>Salvar</button>
       </div>
     )

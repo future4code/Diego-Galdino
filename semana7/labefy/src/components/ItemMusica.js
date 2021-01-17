@@ -39,10 +39,10 @@ export default class ItemMusica extends React.Component {
     render() {
         const exibirListaMusica = this.state.musicasPlayList.map((p) => {
             return (
-                <div>
-                    <p>{(this.state.musicasPlayList.indexOf(p))+1}</p>
-                    <p>{p.artist}</p>
-                    <p>{p.name}</p>
+                <div className="itemMusica">
+                    <p className="numero">{(this.state.musicasPlayList.indexOf(p))+1}</p>
+                    <p>Artista: <strong>{p.artist}</strong></p>
+                    <p>Musica: <strong>{p.name}</strong></p>
                     <audio  controls="controls" src={p.url}></audio>
                     <button onClick={() => { this.excluirMusica(p) }}>Excluir Musica</button>
                 </div>
