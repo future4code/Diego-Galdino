@@ -1,10 +1,44 @@
 import axios from "axios"
+import styled from "styled-components"
 import { useEffect, useState } from "react"
 import { baseUrl } from "../parameters"
-import planet from "../img/planet.png"
+
+import { goTo } from "../routes/Coordinator"
+import { useHistory } from "react-router-dom"
+import { useGetRequestData } from "../hooks/useGetRequestData"
+import TripDetailsFormPage from "./TripDetailsFormPage"
+
+export const SectionTrips = styled.section`
+    display:flex;
+    margin:0 auto;
+    width:70%;
+    padding:20px;
+`
+export const ArticleTrip = styled.article`
+    padding:30px;
+    margin:20px;
+    width: 30%;
+
+    border: 1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+    &:hover{ 
+        background-color:rgb(255,116,72,1);
+        color:#fff;
+    }
+`
+export const DivPlanet = styled.div`
+    width:40px;
+    height:40px;
+    border-radius:30px;
+    border: 2px solid #fff;
+    background-color:#FF7448;
+    float:right;
+`
 
 export default function ListTripsPage() {
     const [listTrips, setlistTrips] = useState([])
+    const history = useHistory()
 
     const getListTrips = () => {
         axios
@@ -15,22 +49,26 @@ export default function ListTripsPage() {
 
     useEffect(() => getListTrips(), [])
 
+    // const getListTrips=useGetRequestData(`${baseUrl}/trips`,{})
+    // setlistTrips(getListTrips.trips)
+
     const showList = listTrips.map((t) => {
         return (
-            <div>
-                <img src={planet} alt=""/>
-                <p>{t.planet}</p>
-                <p>{t.name}</p>
+            <ArticleTrip  onClick={()=>{goTo(history,"/TripDetailsFormPage")}} >
+                <DivPlanet></DivPlanet>
+                <p>Planeta: {t.planet}</p>
+                <p>Viagem: {t.name}</p>
                 <p>{t.description}</p>
-                <p>{t.date}</p>
-                <p>{t.durationInDays}</p>
-            </div>
+                <p>Data: {t.date}</p>
+                <p>Duração: {t.durationInDays} dias</p>
+                <TripDetailsFormPage trip={t}></TripDetailsFormPage>
+            </ArticleTrip>
         )
     })
 
     return (
-        <div>
+        <SectionTrips>
             {showList}
-        </div>
+        </SectionTrips>
     )
 }

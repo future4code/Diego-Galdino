@@ -4,7 +4,7 @@ import CreateTripPage   from "../pages/CreateTripPage";
 import HomePage         from "../pages/HomePage";
 import ListTripsPage    from "../pages/ListTripsPage";
 import LoginPage        from "../pages/LoginPage";
-import TripDetailsPage  from "../pages/TripDetailsPage";
+import TripDetailsPage  from "../pages/TripDetailsFormPage";
 import ErrorPage        from "../pages/ErrorPage";
 
 export default function Router() {
@@ -26,6 +26,9 @@ export default function Router() {
                     <LoginPage/>
                 </Route>
                 <Route exact path="/TripDetailsPage">
+                    <TripDetailsPage/>
+                </Route>
+                <Route exact path="/TripDetailsFormPage">
                     <TripDetailsPage/>
                 </Route>
                 <Route >

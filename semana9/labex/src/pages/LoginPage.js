@@ -1,4 +1,9 @@
+import axios from "axios"
+import { useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import styled from "styled-components"
+import { useInput } from "../hooks/useInput"
+import { baseUrl } from "../parameters"
 
 export const SectionLogin = styled.section`
 padding:20px;
@@ -37,13 +42,39 @@ export const InputUser = styled.input`
 `
 
 export default function LoginPage() {
+    const [email, setEmail] = useInput()
+    const [password, setPassword] = useInput()
+
+    const history = useHistory();
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        if (token) {
+            history.push("/TripDetailsPage")
+        }
+    }, [history])
+
+    const login = () => {
+        const body = {
+            email: email,
+            password: password
+        }
+
+        axios
+            .post(`${baseUrl}/login`, body)
+            .then((response) => {
+                localStorage.setItem("token", response.data.token)
+                history.push("/TripDetailsPage")
+            })
+            .catch(err => console.log(err))
+    }
 
     return (
         <SectionLogin>
             <h3>Faça o login</h3>
-            <InputUser type="text" placeholder="Login"></InputUser>
-            <InputUser type="password" placeholder="Senha"></InputUser>
-            <ButtonEnter>Entrar</ButtonEnter>
+            <InputUser type="text" placeholder="Login" value={email} onChange={setEmail}></InputUser>
+            <InputUser type="password" placeholder="Senha" value={password} onChange={setPassword}></InputUser>
+            <ButtonEnter onClick={login}>Entrar</ButtonEnter>
             <p>Ao fazer login ou criar uma conta, você concorda com nossos <strong>Termos e Condições e Declaração de Privacidade</strong> </p>
         </SectionLogin>
     )

@@ -1,4 +1,5 @@
-export default function TripDetailsPage() {
+
+export default function FormTrip() {
 
 
     return (

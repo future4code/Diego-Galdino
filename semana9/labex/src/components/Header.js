@@ -34,7 +34,7 @@ const Header = () => {
             <UlHeader>
                 <LiHeader onClick={()=>{goTo(history,"/")}}>Home</LiHeader>
                 <LiHeader onClick={()=>{goTo(history,"/ListTripsPage")}}>Viagens</LiHeader>
-                <LiHeader onClick={()=>{goTo(history,"/LoginPage")}}>Historia</LiHeader>
+                <LiHeader onClick={()=>{goTo(history,"/LoginPage")}}>ADM</LiHeader>
             </UlHeader>
 
         </AppHeader>
