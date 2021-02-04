@@ -32,9 +32,9 @@ const Header = () => {
         <AppHeader>
             <img src={logo} alt="" />
             <UlHeader>
-                <LiHeader onClick={()=>{goTo(history,"/")}}>Home</LiHeader>
-                <LiHeader onClick={()=>{goTo(history,"/ListTripsPage")}}>Viagens</LiHeader>
-                <LiHeader onClick={()=>{goTo(history,"/LoginPage")}}>ADM</LiHeader>
+                <LiHeader onClick={()=>{goTo(history,"/","")}}>Home</LiHeader>
+                <LiHeader onClick={()=>{goTo(history,"/ListTripsPage","")}}>Viagens</LiHeader>
+                <LiHeader onClick={()=>{goTo(history,"/LoginPage","")}}>ADM</LiHeader>
             </UlHeader>
 
         </AppHeader>

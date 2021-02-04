@@ -1,3 +1,3 @@
-export const goTo=(history,route)=>{
-    history.push(route)
+export const goTo=(history,route,param)=>{
+    history.push(route+param)
 }

@@ -6,7 +6,7 @@ import { baseUrl } from "../parameters"
 import { goTo } from "../routes/Coordinator"
 import { useHistory } from "react-router-dom"
 import { useGetRequestData } from "../hooks/useGetRequestData"
-import TripDetailsFormPage from "./TripDetailsFormPage"
+
 
 export const SectionTrips = styled.section`
     display:flex;
@@ -25,6 +25,7 @@ export const ArticleTrip = styled.article`
     &:hover{ 
         background-color:rgb(255,116,72,1);
         color:#fff;
+        cursor: pointer;
     }
 `
 export const DivPlanet = styled.div`
@@ -38,6 +39,7 @@ export const DivPlanet = styled.div`
 
 export default function ListTripsPage() {
     const [listTrips, setlistTrips] = useState([])
+    const [tripSelected, setTripSelected] = useState({})
     const history = useHistory()
 
     const getListTrips = () => {
@@ -49,19 +51,25 @@ export default function ListTripsPage() {
 
     useEffect(() => getListTrips(), [])
 
+
+
+    const getTripSelected = (trip) => {
+        setTripSelected(trip)
+        goTo(history,"/ApplyTrip/",trip.id+"/"+trip.name+"/"+trip.planet)
+    }
+
     // const getListTrips=useGetRequestData(`${baseUrl}/trips`,{})
     // setlistTrips(getListTrips.trips)
 
     const showList = listTrips.map((t) => {
         return (
-            <ArticleTrip  onClick={()=>{goTo(history,"/TripDetailsFormPage")}} >
+            <ArticleTrip  onClick={()=>{getTripSelected(t)}} >
                 <DivPlanet></DivPlanet>
                 <p>Planeta: {t.planet}</p>
                 <p>Viagem: {t.name}</p>
                 <p>{t.description}</p>
                 <p>Data: {t.date}</p>
                 <p>Duração: {t.durationInDays} dias</p>
-                <TripDetailsFormPage trip={t}></TripDetailsFormPage>
             </ArticleTrip>
         )
     })

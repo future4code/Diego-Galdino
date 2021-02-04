@@ -4,8 +4,9 @@ import CreateTripPage   from "../pages/CreateTripPage";
 import HomePage         from "../pages/HomePage";
 import ListTripsPage    from "../pages/ListTripsPage";
 import LoginPage        from "../pages/LoginPage";
-import TripDetailsPage  from "../pages/TripDetailsFormPage";
+import TripDetailsPage  from "../pages/TripDetailsPage";
 import ErrorPage        from "../pages/ErrorPage";
+import ApplyTrip from "../pages/ApplyTrip";
 
 export default function Router() {
 
@@ -28,8 +29,8 @@ export default function Router() {
                 <Route exact path="/TripDetailsPage">
                     <TripDetailsPage/>
                 </Route>
-                <Route exact path="/TripDetailsFormPage">
-                    <TripDetailsPage/>
+                <Route exact path="/ApplyTrip/:id/:trip/:planet">
+                    <ApplyTrip/>
                 </Route>
                 <Route >
                     <ErrorPage/>

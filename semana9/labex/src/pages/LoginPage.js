@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom"
 import styled from "styled-components"
 import { useInput } from "../hooks/useInput"
 import { baseUrl } from "../parameters"
+import { goTo } from "../routes/Coordinator"
 
 export const SectionLogin = styled.section`
 padding:20px;
@@ -39,6 +40,7 @@ export const InputUser = styled.input`
     font-size:16px;
     border:1px solid #FF7448;
     border-radius:4px;
+    box-sizing:border-box;
 `
 
 export default function LoginPage() {
@@ -64,7 +66,7 @@ export default function LoginPage() {
             .post(`${baseUrl}/login`, body)
             .then((response) => {
                 localStorage.setItem("token", response.data.token)
-                history.push("/TripDetailsPage")
+                goTo(history,"/TripDetailsPage","")
             })
             .catch(err => console.log(err))
     }
