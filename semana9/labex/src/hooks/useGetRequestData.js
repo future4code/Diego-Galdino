@@ -8,11 +8,10 @@ export function useGetRequestData(url, initialState) {
     axios
       .get(url)
       .then((res) => {
-        setData(res.data);
-        console.log("url",url, "initialState",initialState, res)
+        setData(res.data)
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err)
       });
   }, [url]);
 

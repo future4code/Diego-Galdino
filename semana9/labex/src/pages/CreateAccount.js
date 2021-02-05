@@ -37,7 +37,6 @@ export const DivError = styled.div`
 export const PCreate = styled.span`
     color:#FF7448;
     cursor: pointer;
-    &:hover{border-bottom:1px solid}
 `
 export const InputUser = styled.input`
     border:none;
@@ -51,41 +50,35 @@ export const InputUser = styled.input`
     box-sizing:border-box;
 `
 
-export default function LoginPage() {
+export default function CreateAccount() {
     const [form, onChange, clear] = useForm({ email: "", password: "" })
-    const [visible,setVisible]=useState(false)
-    const erroMessage="Login ou senha incorretos"
+    const [visible, setVisible] = useState(false)
 
     const history = useHistory();
 
-    useEffect(() => {
-        const token = localStorage.getItem("token")
-        if (token) {
-            goTo(history, "/TripDetailsPage", "")
-        }
-    }, [history])
-
-    const login = (event) => {
+    const createLogin = (event) => {
         event.preventDefault()
 
         axios
-            .post(`${baseUrl}/login`, form)
+            .post(`${baseUrl}/signup`, form)
             .then((response) => {
-                localStorage.setItem("token", response.data.token)
-                goTo(history, "/TripDetailsPage", "")
-                window.location.reload()
+                response.data.success ? alert("Sua conta foi cadastrada com sucesso"):alert("Sua conta não foi criada")
+                goTo(history, "/LoginPage", "")
+
+
             })
             .catch(err => {
                 console.log(err)
-                setVisible(true)
+
             })
         clear()
     }
 
     return (
         <SectionLogin>
-            <h1>Faça o login com seus dados</h1>
-            <form onSubmit={login}>
+            <h1>Criando uma consta</h1>
+            <p>Preencha coms seus dados. Necessario o preenchimento de todos os campos</p>
+            <form onSubmit={createLogin}>
                 <InputUser
                     name="email"
                     type="text"
@@ -94,7 +87,7 @@ export default function LoginPage() {
                     onChange={onChange}
                     title="Preencha seu email"
                     required
-                    />
+                />
                 <InputUser
                     name="password"
                     type="password"
@@ -106,8 +99,8 @@ export default function LoginPage() {
                 />
                 <ButtonEnter >Entrar</ButtonEnter>
             </form>
-            <DivError>{visible?erroMessage:false}</DivError>
-            <p>Ao fazer login ou <PCreate onClick={()=>goTo(history,"/CreateAccount","")}>criar uma conta</PCreate>, você concorda com nossos <strong>Termos e Condições e Declaração de Privacidade</strong> </p>
+            {/* <DivError>{visible?erroMessage:false}</DivError> */}
+            <p>Ao criar uma conta, você concorda com nossos <strong>Termos e Condições e Declaração de Privacidade</strong> </p>
         </SectionLogin>
     )
 }

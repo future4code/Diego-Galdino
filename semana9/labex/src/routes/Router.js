@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Header           from "../components/Header";
-import CreateTripPage   from "../pages/CreateTripPage";
-import HomePage         from "../pages/HomePage";
-import ListTripsPage    from "../pages/ListTripsPage";
-import LoginPage        from "../pages/LoginPage";
-import TripDetailsPage  from "../pages/TripDetailsPage";
-import ErrorPage        from "../pages/ErrorPage";
+import Header from "../components/Header";
+import CreateTripPage from "../pages/CreateTripPage";
+import ListTripsPage from "../pages/ListTripsPage";
+import LoginPage from "../pages/LoginPage";
+import NewTripPage from "../pages/NewTripPage";
+import TripDetailsPage from "../pages/TripDetailsPage";
+import ErrorPage from "../pages/ErrorPage";
 import ApplyTrip from "../pages/ApplyTrip";
+import CreateAccount from "../pages/CreateAccount";
 
 export default function Router() {
 
@@ -14,26 +15,30 @@ export default function Router() {
         <BrowserRouter>
             <Header />
             <Switch>
-                <Route exact path="/">
-                    <HomePage/>
-                </Route>
                 <Route exact path="/CreateTripPage">
-                    <CreateTripPage/>
+                    <CreateTripPage />
                 </Route>
-                <Route exact path="/ListTripsPage">
-                    <ListTripsPage/>
+                <Route exact path={"/ListTripsPage","/"}>
+                    <ListTripsPage />
                 </Route>
                 <Route exact path="/LoginPage">
-                    <LoginPage/>
+                    <LoginPage />
+                </Route>
+                <Route exact path="/CreateAccount">
+                    <CreateAccount />
                 </Route>
                 <Route exact path="/TripDetailsPage">
-                    <TripDetailsPage/>
+                    <TripDetailsPage />
                 </Route>
+                <Route exact path="/NewTripPage">
+                        <NewTripPage />
+                </Route>
+
                 <Route exact path="/ApplyTrip/:id/:trip/:planet">
-                    <ApplyTrip/>
+                    <ApplyTrip />
                 </Route>
                 <Route >
-                    <ErrorPage/>
+                    <ErrorPage />
                 </Route>
             </Switch>
         </BrowserRouter>

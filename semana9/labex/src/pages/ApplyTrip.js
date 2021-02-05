@@ -2,7 +2,6 @@ import axios from "axios";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
 import useForm from "../hooks/useForm";
-import { useInput } from "../hooks/useInput";
 import { baseUrl } from "../parameters";
 import { goTo } from "../routes/Coordinator";
 
@@ -47,18 +46,17 @@ export const InputUser = styled.input`
 
 export default function ApplyTrip(props) {
     const pathParams = useParams()
-    const history = useHistory();
+    const history = useHistory()
 
-    const [form, onChange, clear] = useForm({ name: "", age: "", applicationText: "", profession: "", country: "" });
+    const [form, onChange, clear] = useForm({ name: "", age: "", applicationText: "", profession: "", country: "" })
     const applyToTrip = (event) => {
-        event.preventDefault();
-        console.log(form)
+        event.preventDefault()
 
         axios
             .post(`${baseUrl}/trips/${pathParams.id}/apply`, form)
             .then((response) => {
                 alert("Pedido Realizado")
-                goTo(history, "/ListTripsPage", "")
+                goTo(history, "/", "")
             })
             .catch(err => console.log(err))
 
