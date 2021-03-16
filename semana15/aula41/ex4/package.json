@@ -1,0 +1,13 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node ./build/index.js && node ./build/arq1.js && node ./build/arq2.js&& node ./build/arq3.js"
+  },
+  "keywords": [],
+  "author": "Diego",
+  "license": "ISC"
+}
