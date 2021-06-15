@@ -1,0 +1,21 @@
+{
+   "scripts": {
+      "build": "tsc",
+      "exe1": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exe1",
+      "exe2": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exe2",
+      "exe3": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exe3",
+      "exe4": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exe4",
+      "exe5": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exe5",
+      "iteractive-factorial": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/iteractive/factorial",
+      "iteractive-fibonacci": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/iteractive/fibonacci",
+      "iteractive-print-characters": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/iteractive/print_characters",
+      "recursive-factorial": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/recursive/factorial",
+      "recursive-fibonacci": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/recursive/fibonacci",
+      "recursive-print-characters": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/recursive/print_characters"
+   },
+   "devDependencies": {
+      "@types/node": "^15.3.0",
+      "ts-node-dev": "^1.1.6",
+      "typescript": "^4.2.4"
+   }
+}
